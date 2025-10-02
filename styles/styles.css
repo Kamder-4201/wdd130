@@ -61,6 +61,7 @@ code {
 .intro-image img {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  margin-top: 110px;
 }
 
 /* Class examples - can be reused */
@@ -104,4 +105,25 @@ footer {
   text-align: center;
   padding: 15px;
   margin-top: 30px;
+}
+
+.leyte-map {
+  width: 450px;   /* make it larger */
+  max-width: 100%; /* ensures it doesn’t overflow on smaller screens */
+  height: auto;    /* keeps proportions */
+}
+
+aside.box {
+  position: relative; /* this makes it the container for absolute elements */
+  display: inline-block; /* shrink-wrap around content */
+}
+
+aside.box h2 {
+  position: absolute;
+  bottom: 25px;   /* distance from bottom of aside */
+  right: 18px;  /* distance from left of aside */
+  background-color: rgba(0, 0, 0, 0.6); /* dark background for readability */
+  color: white;
+  padding: 2px 10px;
+  border-radius: 10px;
 }
