@@ -1,0 +1,156 @@
+/* ================= RESET & BASICS ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-font: Arial, sans-serif;
+  --body-color: #222;
+  --primary-color: #c7b9f5;   /* light purple */
+  --secondary-color: #0000cc; /* deep blue */
+}
+
+body {
+  font-family: var(--body-font);
+  line-height: 1.6;
+  background-color: #fdfdfd;
+  color: var(--body-color);
+}
+
+/* ================= LAYOUT CONTAINER ================= */
+header, main, footer {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+/* ================= HEADER ================= */
+header {
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;  /* 👈 This controls thickness */
+  border-bottom: 20px solid white; /* default (desktop/tablet) */
+}
+
+/* On smaller screens shrink the strip */
+@media (max-width: 768px) {
+  header {
+    border-bottom: 10px solid white; /* thinner bar on mobile */
+    padding: 10px 20px; /* also tighten padding for mobile */
+  }
+}
+
+header img {
+  width: 100px;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ================= HERO ================= */
+/* HERO */
+.hero {
+  position: relative; /* allows absolute children */
+  background-image: url("../images/rafting12_1024.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 100%;
+  overflow: hidden; /* prevents content spilling */
+}
+
+/* Top blue strip with title */
+.hero h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 128, 0.7); /* blue overlay */
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px;
+  margin: 0;
+}
+
+/* Bottom article box (like screenshot) */
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7); /* dark overlay */
+  color: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Article text */
+.hero article p {
+  flex: 3;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Article image */
+.hero article img {
+  flex: 1;
+  max-width: 120px;
+  border-radius: 4px;
+}
+
+/* ================= ADVENTURE ================= */
+.adventure {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.adventure h2 {
+  background-color: var(--secondary-color); /* blue strip */
+  color: white;
+  padding: 15px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+
+.adventure p {
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background-color: var(--primary-color);
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer a img {
+  margin: 0 8px;
+  width: 30px;
+}
