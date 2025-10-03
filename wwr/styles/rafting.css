@@ -107,7 +107,6 @@ nav a:hover {
 
 /* Article text */
 .hero article p {
-  flex: 3;
   margin: 0;
   font-size: 1rem;
   line-height: 1.4;
@@ -115,8 +114,9 @@ nav a:hover {
 
 /* Article image */
 .hero article img {
-  flex: 1;
+  float: right;          /* ✅ forces the image to the right */
   max-width: 120px;
+  margin-left: 15px;     /* space between text and image */
   border-radius: 4px;
 }
 
@@ -153,4 +153,8 @@ footer p {
 footer a img {
   margin: 0 8px;
   width: 30px;
+}
+
+.socialmedia a {
+  text-decoration: none;   /* ✅ removes underline */
 }
