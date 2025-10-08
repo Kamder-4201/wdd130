@@ -9,7 +9,7 @@
   --body-font: Arial, sans-serif;
   --body-color: #222;
   --primary-color: #c7b9f5;   /* light purple */
-  --secondary-color: #0000cc; /* deep blue */
+  --secondary-color: #1515d8; /* deep blue */
 }
 
 body {
@@ -17,11 +17,13 @@ body {
   line-height: 1.6;
   background-color: #fdfdfd;
   color: var(--body-color);
+  margin: 0;
+  padding: 0 20px;
 }
 
 /* ================= LAYOUT CONTAINER ================= */
 header, main, footer {
-  max-width: 1920px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -31,39 +33,66 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 30px;  /* 👈 This controls thickness */
-  border-bottom: 20px solid white; /* default (desktop/tablet) */
+  padding: 15px 50px; /* slightly larger spacing for balance */
+  border-bottom: 20px solid white; /* thin white divider under header */
+  max-width: 100%;
+  margin: 0 auto;
 }
 
-/* On smaller screens shrink the strip */
-@media (max-width: 768px) {
-  header {
-    border-bottom: 10px solid white; /* thinner bar on mobile */
-    padding: 10px 20px; /* also tighten padding for mobile */
-  }
-}
-
+/* Logo */
 header img {
   width: 100px;
+  height: auto;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  display: inline-block;          /* allows box styling */
+  padding: 10px 20px;             /* space inside each box */
+  margin: 0 5px;                  /* space between boxes */
+  background-color: #0a68dc;      /* box background color */
+  border-radius: 5px;             /* rounded corners */
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  background-color: #4287d5;
+  transform: scale(1.05);         /* subtle hover “pop” */
 }
 
 nav {
   display: flex;
-  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-nav a {
-  color: var(--secondary-color);
-  text-decoration: none;
-  font-weight: bold;
+/* Responsive tweak */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 10px solid white; /* thinner on mobile */
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
 
 /* ================= HERO ================= */
-/* HERO */
 .hero {
   position: relative; /* allows absolute children */
   background-image: url("../images/rafting12_1024.jpg");
@@ -120,41 +149,123 @@ nav a:hover {
   border-radius: 4px;
 }
 
-/* ================= ADVENTURE ================= */
-.adventure {
-  margin-top: 20px;
+/* ================= HISTORY ================= */
+.history {
+  margin: 15px 0;
   text-align: center;
+}
+
+.history h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--secondary-color);
+}
+
+/* Flex container for paragraphs and center image */
+.history-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* allows stacking on smaller screens */
+}
+
+/* Paragraph styling */
+.history-content p {
+  flex: 1 1 250px; /* grows, shrinks, min width 250px */
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Center image styling */
+.history-content img {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ================= ADVENTURE GRID ================= */
+.adventure {
+  margin: 40px 0;
+  text-align: center;
+}
+
+:root {
+  --adventure-color: #044d96; /* Dodger Blue for Adventure heading */
 }
 
 .adventure h2 {
-  background-color: var(--secondary-color); /* blue strip */
+  background-color: var(--adventure-color);
   color: white;
   padding: 15px;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   border-radius: 5px;
+  margin-bottom: 25px;
 }
 
-.adventure p {
-  margin-top: 15px;
-  font-size: 1.2rem;
+.adventure-grid {
+  display: flex;
+  flex-wrap: wrap; /* wrap items on smaller screens */
+  justify-content: center;
+  gap: 20px;
 }
 
-/* ================= FOOTER ================= */
-footer {
-  background-color: var(--primary-color);
-  padding: 20px;
+.adventure-item {
+  flex: 1 1 200px; /* allows 4 in a row, minimum width 200px */
+  max-width: 250px;
   text-align: center;
 }
 
+.adventure-item img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease; /* hover effect */
+}
+
+.adventure-item img:hover {
+  transform: scale(1.05); /* subtle zoom on hover */
+}
+
+.adventure-item p {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* ================= FOOTER GRID ================= */
+footer {
+  background-color: var(--primary-color);
+  padding: 20px 50px; /* extra horizontal padding */
+}
+
+footer .footer-content {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
 footer p {
-  margin-bottom: 10px;
+  margin: 0 auto;       /* centers the text horizontally */
+  font-weight: 600;
 }
 
-footer a img {
-  margin: 0 8px;
-  width: 30px;
+footer .socialmedia {
+  position: absolute;   /* position icons relative to footer container */
+  right: 15px;          /* distance from right edge */
+  top: -5px;            /* adjust centeredness */
+  display: flex;
+  gap: 15px;
 }
 
-.socialmedia a {
-  text-decoration: none;   /* ✅ removes underline */
+
+footer .socialmedia a img {
+  width: 35px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+footer .socialmedia a img:hover {
+  transform: scale(1.1);
 }
