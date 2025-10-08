@@ -16,10 +16,8 @@ body {
 }
 
 /* Limit content width but still responsive */
-header,
-.grid,
-footer {
-  max-width: auto px;
+header, .grid, footer {
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -73,9 +71,9 @@ aside.box {
 
 aside.box h2 {
   text-align: center;
-  position: center;
+  position: relative;
+  top: 5px;
   bottom: 10px;
-  left: 10px;
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   padding: 4px 10px;
