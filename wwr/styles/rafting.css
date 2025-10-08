@@ -207,31 +207,34 @@ nav {
 
 .adventure-grid {
   display: flex;
-  flex-wrap: wrap; /* wrap items on smaller screens */
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  margin-top: 20px;
 }
 
-.adventure-item {
-  flex: 1 1 200px; /* allows 4 in a row, minimum width 200px */
-  max-width: 250px;
+.adventure-grid figure {
+  flex: 1 1 180px;
+  max-width: 220px;
   text-align: center;
+  margin: 0;
 }
 
-.adventure-item img {
+.adventure-grid figure img {
   width: 100%;
   border-radius: 8px;
-  transition: transform 0.3s ease; /* hover effect */
+  transition: transform 0.3s ease;
 }
 
-.adventure-item img:hover {
-  transform: scale(1.05); /* subtle zoom on hover */
+.adventure-grid figure img:hover {
+  transform: scale(1.05);
 }
 
-.adventure-item p {
-  margin-top: 10px;
+.adventure-grid figcaption {
+  margin-top: 8px;
   font-size: 1rem;
   font-weight: 600;
+  color: var(--body-color);
 }
 
 /* ================= FOOTER GRID ================= */
