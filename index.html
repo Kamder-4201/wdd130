@@ -6,14 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeff Bernard Candelario | WDD 130</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/stylev2.css">
 </head>
 
 <body>
     <header>
         <nav class="navbar">
             <a href="#">Home</a>
-            <a href="wwr/">Rafting Website</a>
+            <a href="wwr/about.html">Rafting Website</a>
             <a href="#">Siteplan</a>
             <a href="#">Profile</a>
             <a href="https://linkedin.com" target="_blank">LinkedIn</a>
@@ -21,36 +21,44 @@
         </nav>
     </header>
 
-    <main>
-        <section class="intro">
-            <div class="intro-text">
-                <h1>Jeff Bernard Candelario | WDD 130</h1>
-                <p>
-                    Wassup! My name is Jeff Bernard and I am from Leyte Philippines. I enjoy baking pastries, especially
-                    brownies and pancakes. Currently I am studying Web Design and Development at BYU Idaho Online. I am
-                    excited
-                    to learn and am looking forward to one day create masterpieces of my own design.
-                </p>
-            </div>
-            <div class="intro-image">
-                <img src="images/profile.jpg" alt="Hello, my name is Jeff Bernard Candelario" width="250">
-            </div>
-        </section>
-
+    <!-- ✅ Wrap main and aside in a grid container -->
+    <div class="grid">
         <aside class="box">
             <h2>Leyte, Philippines</h2>
             <img src="images/leyte.png" alt="Map of Leyte" class="leyte-map">
+            <p>
+                "The Leyte Landing Memorial commemorates the historic landing of General Douglas MacArthur in Palo,
+                Leyte,
+                marking the start of the liberation of the Philippines in 1944."
+            </p>
         </aside>
 
-        <ul class="box">
-            <li><a href="https://www.churchofjesuschrist.org/temples/details/urdaneta-philippines-temple"
-                    target="_blank">Urdaneta Philippines Temple</a></li>
-            <li><a href="https://www.churchofjesuschrist.org/temples/details/cebu-city-philippines-temple"
-                    target="_blank">Cebu City Philippines Temple</a></li>
-            <li><a href="https://www.churchofjesuschrist.org/temples/details/manila-philippines-temple"
-                    target="_blank">Manila Philippines Temple</a></li>
-        </ul>
-    </main>
+        <main>
+            <section class="intro">
+                <div class="intro-text">
+                    <h1>Jeff Bernard Candelario | WDD 130</h1>
+                    <p>
+                        Wassup! My name is Jeff Bernard and I am from Leyte Philippines. I enjoy baking pastries,
+                        especially
+                        brownies and pancakes. Currently I am studying Web Design and Development at BYU Idaho Online.
+                        I am excited to learn and am looking forward to one day create masterpieces of my own design.
+                    </p>
+                </div>
+                <div class="intro-image">
+                    <img src="images/profile.jpg" alt="Hello, my name is Jeff Bernard Candelario" width="200">
+                </div>
+            </section>
+
+            <ul class="box temple-list">
+                <li><a href="https://www.churchofjesuschrist.org/temples/details/urdaneta-philippines-temple"
+                        target="_blank">Urdaneta Philippines Temple</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/temples/details/cebu-city-philippines-temple"
+                        target="_blank">Cebu City Philippines Temple</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/temples/details/manila-philippines-temple"
+                        target="_blank">Manila Philippines Temple</a></li>
+            </ul>
+        </main>
+    </div>
 
     <footer>
         <p>©2025 Jeff Bernard Candelario — Leyte, Philippines</p>
