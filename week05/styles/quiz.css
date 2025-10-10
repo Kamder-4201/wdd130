@@ -30,6 +30,11 @@ input, textarea, select, button {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+    min-height: 50px;
+}
+
+textarea {
+    resize: both;
 }
 
 button {
