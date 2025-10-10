@@ -27,36 +27,60 @@ header, main, footer {
   margin: 0 auto;
 }
 
-/* ================= HEADER ================= */
+/* ===== HEADER GRID ===== */
 header {
   background-color: var(--primary-color);
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr; /* logo+name on left, nav takes remaining space */
   align-items: center;
-  justify-content: space-between;
-  padding: 15px 50px; /* slightly larger spacing for balance */
-  border-bottom: 20px solid white; /* thin white divider under header */
+  padding: 15px 50px;
+  border-bottom: 20px solid white;
   max-width: 100%;
   margin: 0 auto;
 }
 
-/* Logo */
+
+
+header {
+  grid-template-areas: "logo title nav";
+}
+
+/* Logo and Company Name container */
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Logo styling */
 header img {
-  width: 100px;
+  width: 80px;
   height: auto;
 }
 
-/* Navigation */
+/* Company name text */
+.company-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1515d8;
+  margin: 0;
+}
+
+/* Navigation (flex requirement) */
 nav {
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
   gap: 2rem;
 }
 
+/* Navigation links styled as boxes */
 nav a {
-  display: inline-block;          /* allows box styling */
-  padding: 10px 20px;             /* space inside each box */
-  margin: 0 5px;                  /* space between boxes */
-  background-color: #0a68dc;      /* box background color */
-  border-radius: 5px;             /* rounded corners */
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 5px;
+  background-color: #0a68dc;
+  border-radius: 5px;
   color: white;
   text-decoration: none;
   font-weight: 600;
@@ -65,23 +89,16 @@ nav a {
 
 nav a:hover {
   background-color: #4287d5;
-  transform: scale(1.05);         /* subtle hover “pop” */
+  transform: scale(1.05);
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-/* Responsive tweak */
+/* ===== Responsive tweak ===== */
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr; /* stack elements vertically */
+    text-align: center;
     padding: 10px 20px;
-    border-bottom: 10px solid white; /* thinner on mobile */
+    border-bottom: 10px solid white;
   }
 
   nav {
@@ -89,8 +106,11 @@ nav {
     justify-content: center;
     gap: 1rem;
   }
-}
 
+  .company-name {
+    margin-top: 10px;
+  }
+}
 
 /* ================= HERO ================= */
 .hero {
@@ -271,4 +291,29 @@ footer .socialmedia a img {
 
 footer .socialmedia a img:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  header {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "logo title"
+      "nav nav";
+    justify-items: center;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  header img {
+    grid-area: logo;
+  }
+
+  .company-name {
+    grid-area: title;
+    font-size: 1.2rem;
+  }
+
+  nav {
+    grid-area: nav;
+  }
 }
