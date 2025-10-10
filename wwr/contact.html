@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actov Rafting Rapids Co.</title>
-    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/rafting.css">
     <meta name="description"
         content="Learn more about our rafting company, our history, and the adventures we offer on the river. 
         Join us for thrilling rafting trips that bring excitement and memories.">
@@ -30,10 +30,11 @@
             </nav>
         </header>
 
-        <main class="contact-main"></main>
+        <main class="contact-page">
+
             <!-- Company Info -->
             <section class="contact-info">
-                <h2>Actov Rafting Rapids</h2>
+                <h3>Actov Rafting Rapids Contact Us</h3>
                 <p>32 Main River Street, Kolob, Idaho<br>+1 69 420 777<br>
                 <a href="mailto:info@whitewater.com">info@actovraftingrapids.com</a>
                 </p>
@@ -43,43 +44,62 @@
             <section class="map-form">
                 <!-- Google Map Embed -->
                 <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11279.336199501184!2d-115.51832577824761!3d45.38153959499675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sph!4v1760118040921!5m2!1sen!2sph" 
-                width="550" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11279.336199501184!2d-115.51832577824761!3d45.38153959499675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sph!4v1760118040921!5m2!1sen!2sph" 
+                    width="550" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
 
                 <!-- Contact Form -->
                 <form class="contact-form">
-                <label for="name">Name</label>
-                <input type="text" id="name" placeholder="Your Name">
 
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Your Email">
+                    <!-- Name -->
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your Name">
 
-                <p>Message Purpose</p>
-                <div class="radio-group">
-                    <label><input type="radio" name="purpose" value="general"> General Inquiry</label>
-                    <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
-                    <label><input type="radio" name="purpose" value="website"> Website Suggestion</label>
-                </div>
+                    <!-- Email -->
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your Email">
 
-                <label for="message">Message</label>
-                <textarea id="message" placeholder="Type here..."></textarea>
+                    <!-- Message Purpose -->
+                    <p>Message Purpose</p>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="purpose-general" name="purpose" value="general">
+                            <label for="purpose-general">General Inquiry</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="purpose-reservation" name="purpose" value="reservation">
+                            <label for="purpose-reservation">Reservation Question</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="purpose-website" name="purpose" value="website">
+                            <label for="purpose-website">Website Suggestion</label>
+                        </div>
+                    </div>
 
-                <label><input type="checkbox"> Please subscribe me to the monthly newsletter</label>
+                    <!-- Message -->
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Type here..."></textarea>
 
-                <button type="submit">Get in Touch!</button>
+                    <!-- Newsletter Checkbox -->
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="newsletter">
+                        <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <button type="submit">Get in Touch!</button>
                 </form>
             </section>
 
             <!-- Employee Section -->
             <section class="employees box">
-                <h2>We Are Here to Serve You</h2>
+                <h3>We Are Here to Serve You</h3>
                 <div class="employee-profiles">
-                <div class="profile"><img src="images/derp.jpg" alt="Dave - Certified trusted guy"><p>Dave - Quality Inspector<br>"Trust me Bro"</p></div>
-                <div class="profile"><img src="images/derp2.jpg" alt="Kevin - Gear supplier"><p>Kevin - Gear Manager<br>"I got the best gear"</p></div>
-                <div class="profile"><img src="images/derp3.jpg" alt="Duncan - Front Desk bro"><p>Duncan - Receptionist<br>"WAZAAAAAAAAAP"</p></div>
-                <div class="profile"><img src="images/derp4.jpg" alt="Bob - Just Bob"><p>Bob - Tour Guide<br>"Ride and wave"</p></div>
+                    <div class="profile"><img src="images/derp.jpg" alt="Dave - Certified trusted guy"><p>Dave - Quality Inspector<br>"Trust me Bro"</p></div>
+                    <div class="profile"><img src="images/derp2.jpg" alt="Kevin - Gear supplier"><p>Kevin - Gear Manager<br>"I got the best gear"</p></div>
+                    <div class="profile"><img src="images/derp3.jpg" alt="Duncan - Front Desk bro"><p>Duncan - Receptionist<br>"WAZAAAAAAAAAP"</p></div>
+                    <div class="profile"><img src="images/derp4.jpg" alt="Bob - Just Bob"><p>Bob - Tour Guide<br>"Ride and wave"</p></div>
                 </div>
             </section>
 
