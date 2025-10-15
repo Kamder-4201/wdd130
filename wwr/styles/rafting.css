@@ -448,3 +448,52 @@ footer .socialmedia a img:hover {
 }
 
 /* ================= HOME PAGE ================= */
+.home-page .hero-home {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.home-page .hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%); /* darkens image slightly for text contrast */
+}
+
+/* .home-page .hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+} */
+
+.home-page .hero-overlay {
+  position: absolute;
+  inset: 0; /* fills the parent */
+  display: flex;
+  flex-direction: column; /*stack logo and text vertically */
+  align-items: flex-end; /* move to left; change to center or flex-end if needed */
+  justify-content: end; /* vertical position: center, top, or bottom */
+  /* padding-bottom: 38rem;
+  padding-left: 70rem; adjust this to move the overlay horizontally */
+  color: white;
+}
+
+.home-page .overlay-logo {
+  width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+  vertical-align: center;
+}
+
+.home-page .overlay-text {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  color: rgb(0, 0, 0);
+}
