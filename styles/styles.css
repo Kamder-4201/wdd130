@@ -23,7 +23,7 @@ header, .grid, footer {
 
 /* ========== NAVBAR ========== */
 .navbar {
-  background-color: #2c6ebc;
+  background-color: #1A4170;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -138,7 +138,7 @@ p {
 
 /* ========== FOOTER ========== */
 footer {
-  background-color: #2c6ebc;
+  background-color: #1A4170;
   color: white;
   text-align: center;
   padding: 15px;
