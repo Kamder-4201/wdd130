@@ -498,6 +498,38 @@ footer .socialmedia a img:hover {
   color: rgb(0, 0, 0);
 }
 
+/* ========== Call-to-Action Button in Hero Overlay ============== */
+.cta-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #3b4be0; /* slightly darker or hover color */
+}
+
+/* Ensure heading and CTA stack nicely in overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px; /* spacing between logo, heading, and CTA */
+}
+
+
 /* ================= HOMEPAGE NEWSLETTER CARD ================= */
 
 .hero-overlay {
@@ -516,7 +548,7 @@ footer .socialmedia a img:hover {
     position: fixed; /* sticky only for the card */
     bottom: 20px;        /* distance from viewport top */
     align-self: flex-start; /* left side of hero overlay */
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.71);
     padding: 15px;
     border-radius: 8px;
     max-width: 300px;
